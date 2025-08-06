@@ -1,0 +1,94 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d63384, #c2185b, #ad1457);
+  animation: gradientMove 10s ease infinite;
+  background-size: 400% 400%;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 600px;
+  color: #fff;
+  animation: fadeIn 2s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.glass-card h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.btn.fancy {
+  padding: 12px 25px;
+  font-size: 1em;
+  text-decoration: none;
+  border-radius: 30px;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: white;
+}
+.accept {
+  background-color: #28a745;
+}
+.reject {
+  background-color: #dc3545;
+}
+.fancy:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+/* Message Page Styling */
+.wish-page .glass-card {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 50px;
+  color: #fff;
+}
+.message-box p {
+  margin: 15px 0;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+.emojis {
+  font-size: 1.8em;
+  margin: 20px 0;
+}
+.last-line {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffe;
+}
